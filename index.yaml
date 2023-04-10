@@ -252,7 +252,13 @@ paths:
   /wall:
         post:
             summary: Добавление записи на стену пользователя
-            parameters:
+            parameters:  
+                - name: user_id
+                  in: query
+                  description: Ид.пользователя(стены)
+                  required: true
+                  schema:
+                      type: string            
                 - name: post_title
                   in: query
                   description: Заголовок записи
