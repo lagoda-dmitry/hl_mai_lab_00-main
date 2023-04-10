@@ -98,7 +98,6 @@ public:
             {
                 if (form.has("user_id") && form.has("post_title")&& form.has("post_text"))
                 {
-                    long user_id = atol(form.get("user_id").c_str());
                     database::Wall wall;
                     wall.post_title() = form.get("post_title");
                     wall.post_text() = form.get("post_text");
